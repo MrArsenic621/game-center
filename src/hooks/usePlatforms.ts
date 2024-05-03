@@ -9,11 +9,11 @@ export interface Platform {
   slug: string;
 }
 
-const usePlatform = () =>
+const usePlatforms = () =>
   useQuery({
     queryKey: ["platforms"],
     queryFn: apiClient.getAll,
     staleTime: 12 * 60 * 60 * 1000, //12h
   });
 
-export default usePlatform;
+export default usePlatforms;
